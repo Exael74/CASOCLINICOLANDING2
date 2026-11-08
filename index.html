@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Caso pediátrico</title>
-<meta name="description" content="Caso pediátrico: fractura supracondílea de húmero izquierdo.">
+<title>Caso adulto</title>
+<meta name="description" content="Caso adulto: fractura bimaleolar del tobillo derecho y síndrome de la banda iliotibial.">
 <meta name="theme-color" content="#141519" id="themeColor">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -199,9 +199,15 @@ html[data-theme=dark] .face::after{background:#050508}
 .step li::before{content:"— ";color:var(--muted)}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;font-family:var(--sans)}
 .cols h4{font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);border-bottom:1px solid var(--cobalt);padding-bottom:10px;margin-bottom:12px}
-.cols li{list-style:none;font-family:var(--serif);font-style:italic;font-size:clamp(20px,1.55vw,24px);line-height:1.4;margin-bottom:10px}
+.cols li{list-style:none;font-family:var(--serif);font-style:normal;font-size:clamp(20px,1.55vw,24px);line-height:1.4;margin-bottom:10px}
 .hy{display:grid;font-family:var(--sans);border-top:1px solid var(--hair)}
 .hy details{border-bottom:1px solid var(--hair)}
+.hrow{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:20px 2px;border-bottom:1px solid var(--hair)}
+.hrow b{font-size:34px;font-weight:600;color:var(--cobalt);letter-spacing:-.02em;line-height:1}
+.hrow p{font-family:var(--serif);font-size:clamp(20px,1.55vw,24px);line-height:1.55}
+.hrow em{display:inline-block;margin-top:10px;font-style:normal;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--cobalt);color:var(--cobalt);padding:6px 9px}
+.shot{margin:0}
+.shot figcaption{font-family:var(--sans);font-weight:600;font-size:clamp(16px,1.2vw,19px);color:var(--cobalt);margin-top:10px}
 .hy summary{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:20px 2px;list-style:none}
 .hy summary::-webkit-details-marker{display:none}
 .hy summary b{font-size:34px;font-weight:600;color:var(--cobalt);letter-spacing:-.02em}
@@ -331,7 +337,7 @@ html[data-theme=dark] .theme:hover svg{transform:rotate(270deg) scale(1.1)}
 
 <header class="top">
   <div class="l">
-    <a class="lbl" href="#" data-go="0">CASO PEDIÁTRICO</a>
+    <a class="lbl" href="#" data-go="0">CASO ADULTO</a>
   </div>
   <div class="r">
     <button class="theme" id="theme" aria-label="Cambiar entre modo claro y oscuro"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path class="fill" d="M12 3.5a8.5 8.5 0 0 0 0 17z"/></svg></button>
@@ -365,7 +371,7 @@ html[data-theme=dark] .theme:hover svg{transform:rotate(270deg) scale(1.1)}
 <div class="detail" id="detail" aria-modal="true" role="dialog" aria-label="Detalle">
   <button class="dclose box lbl" id="dclose">CERRAR&nbsp;/&nbsp;×</button>
   <div class="dpager lbl"><button id="dprev" aria-label="Anterior"><svg viewBox="0 0 24 12"><path d="M6 1L1 6l5 5M1 6h23"/></svg></button><span id="dcount"></span><button id="dnext" aria-label="Siguiente"><svg viewBox="0 0 24 12"><path d="M18 1l5 5-5 5M23 6H0"/></svg></button></div>
-  <div class="dbrand lbl"><span>CASO PEDIÁTRICO</span></div>
+  <div class="dbrand lbl"><span>CASO ADULTO</span></div>
   <div class="dgrid">
     <div class="dleft" id="dleft"><div class="dinner" id="dinner"></div></div>
     <div class="dright" id="dright"></div>
@@ -376,63 +382,58 @@ html[data-theme=dark] .theme:hover svg{transform:rotate(270deg) scale(1.1)}
 
 <script>
 "use strict";
-/* ============ CONTENIDO: tomado literalmente de carrusel_caso_pediatrico.md ============
-   (portada, enlaces y genograma: de los datos del sitio Sarar website) */
+/* ============ CONTENIDO: documento "DATOS PÁGINA" (Google Docs) y presentación
+   "Formato PPT Caso Adultos 2026-1" enlazada en ese documento ============ */
 const A="assets/";
 const CARDS=[
- {k:"portada",title:"Caso pediátrico",cover:"CASO PEDIÁTRICO",icon:"caso-pediatrico.png",
-  head:"Presentación del paciente",paras:[
-  "Paciente masculino de 10 años, estudiante de quinto de primaria, con diagnóstico de fractura supracondílea del húmero izquierdo tras una caída durante actividad física. Requirió inmovilización con férula durante tres semanas y, después de este período, se retiró la férula e inició su proceso de rehabilitación fisioterapéutica.",
-  "Actualmente presenta dolor 8/10 e hiperalgesia en el miembro superior izquierdo, además de limitación de la movilidad y disminución de la fuerza. También presenta dolor escapular asociado a compensaciones posturales.",
-  "Vive con sus padres, hermana y abuela en Bogotá, cuenta con apoyo familiar y su principal expectativa es recuperar el movimiento del brazo y volver a jugar fútbol."]},
+ {k:"portada",title:"Presentación del paciente",cover:"PRESENTACIÓN DEL PACIENTE",icon:"presentacion.png",
+  paras:[
+  "Paciente masculino de 37 años, con antecedente de fractura bimaleolar del tobillo derecho, tratada mediante inmovilización ortopédica conservadora, y síndrome de la banda iliotibial en el miembro inferior izquierdo. Posteriormente al periodo de inmovilización, presenta alteraciones en las estructuras óseas, articulares y ligamentarias del tobillo derecho, así como en las estructuras fasciales del muslo izquierdo.",
+  "Actualmente presenta dolor y limitación del rango de movimiento del tobillo derecho, con disminución del desempeño muscular (MRC 3/5), alteraciones del balance y dificultades para la movilidad funcional. Adicionalmente, presenta dolor en la cara lateral del muslo y la rodilla izquierda, asociado a la sobrecarga mecánica compensatoria durante la marcha con muletas. Estas alteraciones afectan actividades como mantener la bipedestación, desplazarse, cocinar, cargar objetos y recorrer largas distancias.",
+  "Cuenta con factores facilitadores para su proceso de rehabilitación, como el apoyo de su esposa e hijo, acceso a seguridad social y flexibilidad para realizar teletrabajo. Sin embargo, presenta barreras como dolor urente de 7/10 en el muslo izquierdo, alteración del balance estático y debilidad de los estabilizadores pélvicos y de la musculatura flexo-extensora del tobillo, factores que pueden influir en su recuperación y retorno a las actividades laborales y recreativas."]},
  {k:"tabla",title:"Anamnesis",cover:"ANAMNESIS",icon:"anamnesis.png",
-  rows:[["Documento de identidad","N/A"],["Fecha de nacimiento","25/04/2016"],["Edad","10 años"],["Sexo","Masculino"],["Procedencia","Bogotá D.C"],["Estado civil","Soltero"],["Natural","Bogotá D.C"],["Ocupación","Estudiante"]]},
+  rows:[["Documento de identidad","N/A"],["Fecha de nacimiento","18 junio 1989"],["Edad","36 años"],["Sexo","Masculino"],["Procedencia","Bogotá"],["Estado civil","Casado"],["Natural","Bogotá"],["Ocupación","Analista en Aseguradora"]]},
  {k:"imagen",title:"Diagnóstico médico",cover:"DIAGNÓSTICO MÉDICO",icon:"diagnostico-medico.png",
-  sub:"Imagen relacionada con la lesión",imgs:[
-  {src:A+"lesion-1.jpeg",alt:"Ilustración anatómica del codo izquierdo con fractura supracondílea de húmero de tipo extensión"},
-  {src:A+"lesion-2.jpeg",alt:"Ilustración del codo en vista anatómica con la zona de la fractura"}]},
+  imgs:[
+  {src:A+"fractura-bimaleolar.png",cap:"Fractura bimaleolar",alt:"Ilustración y radiografía del tobillo con fractura bimaleolar"},
+  {src:A+"banda-iliotibial.png",cap:"Síndrome de la banda iliotibial",alt:"Ilustración del muslo con la banda iliotibial y el sitio de dolor"}]},
  {k:"tabla",title:"Antecedentes",cover:"ANTECEDENTES",icon:"antecedentes.png",
-  rows:[["Familiares y personales","No refiere"],["Quirúrgicos","No refiere"],["Farmacológicos","No refiere"],["Tóxico alérgicos","No refiere"],["Traumáticos","No refiere"]]},
+  rows:[["Familiares y personales","Familiares: Cáncer de pulmón Abuelo Materno, cáncer de tiroides en Abuela materna y Madre"],["Quirúrgicos","Niega"],["Farmacológicos","Niega"],["Tóxico alérgicos","Niega"],["Traumáticos","Niega"]]},
  {k:"cita",title:"Motivo de consulta",cover:"MOTIVO DE CONSULTA",icon:"motivo.png",
-  pre:"El paciente refiere:",quote:"Tuve una fractura en el codo izquierdo"},
+  quote:"Me fracturé el tobillo jugando fútbol y me enviaron a terapias"},
  {k:"tiempo",title:"Cronología de la patología",cover:"CRONOLOGÍA DE LA PATOLOGÍA",icon:"cronologia.png",
-  img:{src:A+"cronologia-diagrama.png",alt:"Diagrama de flujo de la cronología de la patología: caída, diagnóstico, inmovilización con férula, retiro de férula e inicio de fisioterapia"},
-  steps:[
-   {d:"14/07/26",l:["Caída durante actividad física.","Impacto directo en codo izquierdo.","Dolor intenso + edema + limitación funcional.","Radiografía: fractura supracondílea de húmero izquierdo.","Sin signos de derrame articular.","Remisión a Ortopedia."]},
-   {d:"15/07/26 · Diagnóstico confirmado",l:["Inmovilización con férula de yeso.","Control en 3 semanas."]},
-   {d:"05/08/26",l:["Retiro de férula.","Consolidación ósea satisfactoria.","Inicio de fisioterapia.","Dolor en codo y región interescapular.","Molestias asociadas a inmovilización y compensación postural.","Objetivo: recuperar movilidad y función."]}]},
- {k:"texto",title:"Análisis sociodemográfico",cover:"ANÁLISIS SOCIODEMOGRÁFICO",icon:"sociodemografico.png",
-  paras:["Paciente vive con **madre, padre, hermana y abuela** en la ciudad de Bogotá, cuenta con el **apoyo económico y emocional** por parte de su vínculo familiar. Actualmente asiste con normalidad al colegio."],
-  fam:{src:A+"familia.png",alt:"Genograma familiar: el paciente de 10 años vive con su madre, su padre, su hermana y su abuela"}},
+  img:{src:A+"cronologia-diagrama.png",alt:"Gráfico secuencial de la cronología de la patología"}},
+ {k:"texto",title:"Análisis sociodemográfico del paciente",cover:"ANÁLISIS SOCIODEMOGRÁFICO DEL PACIENTE",icon:"sociodemografico.png",
+  paras:["Paciente masculino de 36 años, casado, tiene un hijo. Pertenece a una familia nuclear biparental conformada por su esposa y su hijo, con quienes convive en un apartamento en Bogotá. El paciente trabaja en una aseguradora bajo modalidad mixta, alternando días de trabajo presencial con días de trabajo desde casa."],
+  fam:{src:A+"familiograma.png",alt:"Familiograma del paciente"}},
  {k:"cols",title:"Expectativas, demandas y necesidades",cover:"EXPECTATIVAS, DEMANDAS Y NECESIDADES",icon:"expectativas.png",
   cols:[
-   {t:"Expectativas",i:["“Poder mover mi brazo sin problema”","“Volver a jugar fútbol”"]},
-   {t:"Demandas",i:["“Rehabilitación oportuna para la recuperación de la movilidad de mi antebrazo izquierdo”"]},
-   {t:"Necesidades",i:["Recuperar progresivamente la movilidad, fuerza y funcionalidad del miembro superior izquierdo, disminuyendo la rigidez y las molestias asociadas a la inmovilización."]}]},
- {k:"hip",title:"Set de hipótesis",cover:"SET DE HIPÓTESIS",icon:"hipotesis.png",
+   {t:"Expectativas",i:["Recuperar la movilidad y fuerza del tobillo, disminuir el dolor y la inflamación, y retomar sus labores normales."]},
+   {t:"Demandas",i:["Recibir un tratamiento de rehabilitación efectivo que le permita caminar sin molestias y retomar sus actividades de la vida diaria lo antes posible."]},
+   {t:"Necesidades",i:["Manejo del dolor e inflamación residual en el tobillo y tejidos blandos circundantes.","Protección y descarga controlada del tobillo."]}]},
+ {k:"hip",title:"Conjunto de hipótesis",cover:"CONJUNTO DE HIPÓTESIS",icon:"hipotesis.png",
   items:[
-   {t:"Limitación del ROM",x:"La limitación del rango de movimiento del complejo articular de codo izquierdo es generada por la restricción articular con tope de final óseo y la rigidez de los tejidos periarticulares, secundarias a la inmovilización prolongada con férula."},
-   {t:"Disminución de fuerza (MRC 2/5)",x:"La disminución del rendimiento muscular en flexo-extensores de codo y muñeca izquierdos (MRC 2/5) es generada por el desuso muscular durante el periodo de inmovilización, lo que impide completar el ROM activo contra gravedad."},
-   {t:"Alteración postural",x:"La alteración de la alineación postural (cabeza inclinada, hombro izquierdo ascendido, actitud cifótica) es generada por el mantenimiento de una postura antiálgica-protectora del miembro superior izquierdo durante la inmovilización."},
-   {t:"Dificultad funcional",x:"La dificultad para realizar actividades funcionales finas (escribir) y gruesas (vestirse) es generada por la limitación conjunta de ROM y fuerza muscular del miembro superior izquierdo."}]},
+   {v:1,x:"La limitación del rango de movimiento del complejo articular del tobillo derecho es generada por la restricción articular y la rigidez de los tejidos periarticulares y ligamentarios, secundarias a los cambios postraumáticos y al periodo de inmovilización con yeso posterior a la fractura bimaleolar."},
+   {v:1,x:"La disminución del rendimiento muscular del tobillo derecho (MRC 3/5) es generada por el desuso muscular y la inhibición de la activación muscular asociada al dolor, secundarios al periodo de inmovilización y al proceso postraumático."},
+   {v:1,x:"El dolor en la cara lateral del muslo izquierdo y la rodilla es generado por la sobrecarga mecánica compensatoria del miembro inferior izquierdo durante la marcha con muletas, asociada a las adaptaciones funcionales posteriores a la fractura."},
+   {v:0,x:"La dificultad para mantener la bipedestación prolongada, cocinar, cargar objetos y desplazarse largas distancias es generada por la limitación del rango de movimiento, la disminución del rendimiento muscular, las alteraciones del balance y el dolor en los miembros inferiores, que comprometen la movilidad funcional."}]},
  {k:"largo",title:"Diagnóstico",cover:"DIAGNÓSTICO",icon:"diagnostico.png",
-  chips:["Estructuras (s)","Funciones (b)","Actividad y participación (d)"],
   paras:[
-  "Paciente masculino de 10 años quien presenta deficiencias en estructuras de la extremidad superior (s730), específicamente en estructuras articulares y óseas del húmero izquierdo y el complejo articular del codo (s7300 y s73001), así como deficiencias funcionales en las funciones de la movilidad de la articulación (b710), las funciones de la fuerza muscular (b730), y las funciones relacionadas con la postura (b755), acompañadas de sensación de dolor (b280) localizado en la región húmero-cubital y tensión escapular.",
-  "Estas alteraciones le generan limitaciones en la actividad para llevar a cabo tareas sencillas y complejas (d210 y d220), cambiar y mantener la postura corporal (d410-d429), la manipulación y el transporte de objetos (d430-d449), y dificultades específicas en el autocuidado como vestirse (d540) e higiene personal, así como restricciones en la participación en la vida escolar (relacionadas con la escritura) y en las áreas de la vida comunitaria, recreación y ocio (d920), limitando su desempeño en el juego y la práctica deportiva (como jugar fútbol). Todo esto interactúa con factores ambientales (e) que actúan como barreras temporales en su entorno físico y de apoyo durante su proceso de recuperación post inmovilización."]},
+  "Paciente masculino de 37 años quien presenta deficiencias en estructuras de la extremidad inferior (s750), específicamente en estructuras óseas, articulares y ligamentarias del tobillo derecho (s7502, s75020 y s75023) y en estructuras fasciales del muslo izquierdo (s7500 y s75003), así como deficiencias funcionales en las categorías de dolor, integridad esquelética, integridad y movilidad articular, desempeño muscular, rango de movimiento, postura y balance.",
+  "Estas alteraciones le generan limitaciones en la actividad para cambiar y mantener la postura corporal (d410-d429), levantar, transportar y mover objetos (d430-d435), andar y desplazarse utilizando equipamiento como las muletas (d450-d465), y dificultades específicas en la vida doméstica como preparar comidas (d630) y realizar compras (d620). También le generan restricciones en la participación en la vida laboral (d850), relacionadas con los desplazamientos largos hacia la oficina, y en las áreas de la vida comunitaria, recreación y ocio (d920).",
+  "Todo esto interactúa con factores ambientales que actúan como barreras temporales en su entorno físico y de apoyo durante su proceso de recuperación postinmovilización."]},
  {k:"largo",title:"Pronóstico",cover:"PRONÓSTICO",icon:"pronostico.png",
-  big:"8 a 12 semanas",
   paras:[
-  "Paciente masculino de 10 años de edad, con antecedente de fractura supracondílea del húmero izquierdo (Gartland tipo I) secundaria a caída durante actividad física escolar, tratada de manera conservadora mediante inmovilización con férula tipo yeso durante 3 semanas de clasificación nivel I, con posibilidad de recuperación, limitación en la actividad y participación sin restricción funcional final según la escala de la OMS. Este pronóstico se considera teniendo en cuenta las fases de consolidación ósea satisfactoria a la tercera semana y de intervención fisioterapéutica temprana.",
-  "Estudios recientes en traumatología pediátrica demuestran que, en pacientes con fracturas supracondíleas, en la mayoría de los casos evaluados se alcanza una consolidación ósea firme alrededor de las 4 semanas, permitiendo una evolución clínica excelente y rápida debido a la alta plasticidad biológica propia de su edad, lo que respalda el inicio de la carga mecánica controlada y la movilidad temprana a la restricción articular, mejoras en la debilidad muscular y en dolor post-inmovilización, así mismo se espera que con tratamiento adecuado tenga recuperación sin restricciones finales a corto y mediano plazo (8 a 12 semanas). (Varios Autores, 2023; Cucalón et al., 2025).",
-  "Desde el enfoque fisioterapéutico se espera una progresión rápida hacia la movilidad completa y la eficacia de la mecánica de la marcha (balanceo del brazo izquierdo), siempre que se mantenga un adecuado proceso de rehabilitación enfocado en el control del dolor, la recuperación del rango de movimiento (superando el tope óseo y el déficit de extensión de -5°), el fortalecimiento muscular y la reeducación postural (Morales, 2022; Gutiérrez et al., 2020).",
-  "@@El paciente cuenta con factores facilitadores como la edad (10 años), el amplio apoyo económico y emocional de su núcleo familiar (madre, padre, hermana y abuela), así como su motivación clara por volver a mover el brazo y jugar fútbol, lo que favorece ampliamente la adherencia al tratamiento. Como factores barrera, se destacan la intensidad del dolor agudo al movimiento activo (8/10 EVA), la marcada debilidad muscular (2/5 MRC) y las compensaciones posturales adquiridas tras el uso del inmovilizador (actitud cifótica, cabeza y hombros adelantados, ascenso del hemicuerpo izquierdo), los cuales pueden interferir inicialmente en la tolerancia al ejercicio terapéutico."]},
+  "Paciente masculino de 37 años de edad, con antecedente de fractura bimaleolar del tobillo derecho tratada con inmovilización ortopédica conservadora y síndrome de la banda iliotibial (SBIT) en el miembro inferior izquierdo. Según la escala pronóstica de clasificación de la OMS, lo ubicamos en un Nivel 1, estableciendo una posibilidad de recuperación con limitación en la actividad y/o restricción en la participación, sin restricción funcional final.",
+  "Este pronóstico es favorable dado que los estudios imagenológicos (TAC) confirmaron la ausencia de compromiso en la mortaja articular. Para la rehabilitación de la fractura, nos basamos en la revisión de Cochrane realizada por Lewis et al. (2024), quienes señalan que la progresión del apoyo de peso probablemente conduce a una mejor función del tobillo. Considerando que el paciente ha superado la fase inicial de consolidación, esta evidencia justifica progresar la carga mecánica para revertir las deficiencias de dorsiflexión (10°) y plantiflexión (30°) del paciente, proyectando un retorno funcional completo y sin restricciones hacia los 6 meses post-lesión.",
+  "En cuanto al SBIT izquierdo, secundario a la sobrecarga biomecánica por la marcha con muletas y el apoyo antálgico, el pronóstico de resolución es alto a corto plazo. Friede et al. (2021) establecen que \"la incorporación de ejercicios orientados al fortalecimiento de los abductores de cadera es un componente crucial para el éxito de la rehabilitación\" lo que permite realizar una intervención fisioterapéutica temprana. Hadeed et al. (2023) menciona que la mayoría de los pacientes experimentan un alivio completo de los síntomas y pueden retomar la actividad en un plazo de 6 a 8 semanas con tratamiento conservador. Este esquema de tiempo justifica nuestro enfoque sobre el glúteo medio y el tensor de la fascia lata izquierdos, los cuales cursan con dolor y una calificación muscular deficiente de 3/5.",
+  "El paciente cuenta con factores facilitadores importantes para el proceso de rehabilitación, como un núcleo familiar de apoyo (esposa e hijo), acceso a seguridad social contributiva y flexibilidades de teletrabajo en su ocupación. Sin embargo, hay factores barrera que pueden interferir en el plan de tratamiento, destacamos la intensidad del dolor urente (7/10 EVA) en el muslo izquierdo, la notable alteración del balance estático (prueba de Romberg con dependencia visual) y la debilidad muscular generalizada en estabilizadores pélvicos y flexo-extensores del tobillo."]},
  {k:"link",title:"Metagrafo",cover:"METAGRAFO",icon:"metagrafo.png",
-  url:"https://www.canva.com/design/DAHVIhHIVbw/AtMWZYC_OHixhVl6tYAOpA/edit"},
+  url:"https://canva.link/qmcgybfjugnycl8"},
  {k:"link",title:"Matriz",cover:"MATRIZ",icon:"matriz.png",
-  url:"https://docs.google.com/spreadsheets/d/15-35GMLYdfI55oC_VXUgVpSTB_G_A1Lc/edit?gid=1247960741#gid=1247960741"},
+  url:"https://docs.google.com/spreadsheets/d/1lczYTWxVXW9qtNvrsX9y6UfTY11YNcsn/edit?usp=sharing&ouid=110093298301191831999&rtpof=true&sd=true"},
  {k:"link",title:"Referencias adicionales",cover:"REFERENCIAS ADICIONALES",icon:"referencias.png",
-  url:"https://docs.google.com/document/d/1ZiDFMlfueyyseNp6eKp12Uh8wtpE_TU1OSVLVmRQguk/edit?usp=sharing"}
+  url:"https://docs.google.com/document/d/1R0EE2QpF7to9fY4MZIpOo8l-qAjhQaAr7eHOyQDBNhs/edit?usp=sharing"}
 ];
 const N=CARDS.length, COPIES=3, TOT=N*COPIES, HALF=TOT/2;
 const COLORS=[["#EFE6D2","#1F3FB0"],["#DCE3F1","#D2452B"],["#F1D8CC","#1F3FB0"],["#E3E8D2","#D2452B"],["#EFE6D2","#D2452B"],["#DCE3F1","#1F3FB0"],["#F1D8CC","#D2452B"]];
@@ -445,7 +446,7 @@ const sm=x=>x*x*(3-2*x);
 const esc=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fine=matchMedia("(pointer:fine)").matches;
-const CIF=/(s73001|s7300|s730|b710|b730|b755|b280|d410-d429|d430-d449|d210|d220|d540|d920)/g;
+const CIF=/(s75023|s75020|s75003|s7502|s7500|s750|d410-d429|d430-d435|d450-d465|d630|d620|d850|d920)/g;
 const rich=t=>esc(t).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>").replace(CIF,'<strong class="cif">$1</strong>');
 const pad=n=>String(n).padStart(2,"0");
 
@@ -473,7 +474,7 @@ function coverInner(c,i){
   <rect x="12" y="12" width="450" height="876" fill="none" stroke="#141414" stroke-opacity=".8" stroke-width="2"/>
   <rect x="19" y="19" width="436" height="864" fill="none" stroke="${ac}" stroke-width="1"/>
   <rect x="19" y="19" width="436" height="50" fill="${ac}"/>
-  <text x="37" y="50" font-family="Inter Tight,sans-serif" font-weight="800" font-size="15" letter-spacing="3.4" fill="${bg}">CASO PEDIÁTRICO</text>
+  <text x="37" y="50" font-family="Inter Tight,sans-serif" font-weight="800" font-size="15" letter-spacing="3.4" fill="${bg}">CASO ADULTO</text>
   <text x="437" y="50" text-anchor="end" font-family="Inter Tight,sans-serif" font-weight="800" font-size="15" letter-spacing="2" fill="${bg}">${pad(i+1)} / ${N}</text>
   ${ttl}
   <rect x="${ix}" y="${by}" width="${bs}" height="${bs}" fill="${ac}"/>
@@ -806,14 +807,14 @@ const CIRCLES=[[150,330,0],[340,600,120],[250,120,220],[90,760,300],[400,250,360
 let ink=[],inkRAF=0;
 function bodyHTML(c){
   switch(c.k){
-  case "portada":return `<div class="pre">${esc(c.head)}</div><div class="body">${c.paras.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
+  case "portada":return `<div class="body">${c.paras.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
   case "tabla":return `<table class="tb"><tbody>${c.rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</tbody></table>`;
-  case "imagen":return `<div class="pre">${esc(c.sub)}</div><div class="shots">${c.imgs.map(m=>`<button type="button" data-zoom="${m.src}" data-alt="${esc(m.alt)}" aria-label="Ampliar imagen"><img src="${m.src}" alt="${esc(m.alt)}"></button>`).join("")}</div>`;
-  case "cita":return `<div class="pre">${esc(c.pre)}</div><blockquote class="quote">“${esc(c.quote)}”</blockquote>`;
-  case "tiempo":return `<div class="shots one"><button type="button" data-zoom="${c.img.src}" data-alt="${esc(c.img.alt)}" aria-label="Ampliar imagen"><img src="${c.img.src}" alt="${esc(c.img.alt)}"></button></div><div class="steps">${c.steps.map(s=>`<div class="step"><i></i><div><h4>${esc(s.d)}</h4><ul>${s.l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></div>`).join("")}</div>`;
+  case "imagen":return `<div class="shots">${c.imgs.map(m=>`<figure class="shot"><button type="button" data-zoom="${m.src}" data-alt="${esc(m.alt)}" aria-label="Ampliar imagen"><img src="${m.src}" alt="${esc(m.alt)}"></button><figcaption>${esc(m.cap)}</figcaption></figure>`).join("")}</div>`;
+  case "cita":return `<blockquote class="quote">“${esc(c.quote)}”</blockquote>`;
+  case "tiempo":return `<div class="shots one"><button type="button" data-zoom="${c.img.src}" data-alt="${esc(c.img.alt)}" aria-label="Ampliar imagen"><img src="${c.img.src}" alt="${esc(c.img.alt)}"></button></div>`;
   case "texto":return `<div class="body">${c.paras.map(p=>`<p>${rich(p)}</p>`).join("")}</div>`+(c.fam?`<figure class="fam"><img src="${c.fam.src}" alt="${esc(c.fam.alt)}"></figure>`:"");
   case "cols":return `<div class="cols">${c.cols.map(x=>`<div><h4>${esc(x.t)}</h4><ul>${x.i.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`).join("")}</div>`;
-  case "hip":return `<div class="hy">${c.items.map((h,j)=>`<details><summary><b>${j+1}</b><span>${esc(h.t)}</span><em>Validada</em></summary><p>${esc(h.x)}</p></details>`).join("")}</div>`;
+  case "hip":return `<div class="hy">${c.items.map((h,j)=>`<div class="hrow"><b>${j+1}</b><div><p>${esc(h.x)}</p>${h.v?'<em>Hipótesis validada</em>':''}</div></div>`).join("")}</div>`;
   case "largo":{
     let h="";
     if(c.chips)h+=`<div class="chips">${c.chips.map(x=>`<span class="chip">${esc(x)}</span>`).join("")}</div>`;
@@ -870,7 +871,7 @@ function openDetail(){
 function revealContent(base){
   dinner.querySelectorAll(".dl").forEach((el,j)=>el.animate([{transform:"translateY(110%)"},{transform:"translateY(0)"}],{duration:reduced?1:900,delay:reduced?0:base+j*75,easing:EASE,fill:"both"}));
   if(!reduced){
-    const items=dinner.querySelectorAll(".tb tr,.hy details,.step,.cols>div,.chip,.shots button,.quote,.sub2,.fam img,.body p,.btn-o");
+    const items=dinner.querySelectorAll(".tb tr,.hrow,.cols>div,.shot,.shots.one button,.quote,.fam img,.body p,.btn-o");
     items.forEach((el,j)=>el.animate([{clipPath:"inset(100% 0 0 0)",transform:"translateY(26px)"},{clipPath:"inset(0% 0 0 0)",transform:"translateY(0)"}],{duration:850,delay:base+360+j*60,easing:EASE,fill:"backwards"}));
     const pn=dright.querySelector(".pnl");
     if(pn)pn.animate([{clipPath:"inset(0 0 0 100%)"},{clipPath:"inset(0 0 0 0)"}],{duration:1100,delay:base+120,easing:EASE_CLIP,fill:"backwards"});
