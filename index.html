@@ -148,7 +148,7 @@ button{font:inherit;color:inherit;background:none;border:0}
 .dinner.wide{max-width:none}
 .dinner.wide .body{column-width:420px;column-gap:3vw;column-fill:balance;font-size:clamp(16px,1.2vw,20px);line-height:1.42}
 .dinner.wide .body p{break-inside:auto;orphans:3;widows:3}
-.dinner.wide figure.fam img{max-width:230px}
+.dinner.wide figure.fam img{max-width:173px} /* 230px − 25% */
 .dinner.wide .hy{grid-template-columns:repeat(auto-fit,minmax(400px,1fr));column-gap:3vw}
 .dinner.wide .hrow p{font-size:clamp(16px,1.2vw,20px);line-height:1.42}
 .dm{overflow:hidden}
@@ -219,7 +219,7 @@ button{font:inherit;color:inherit;background:none;border:0}
 .chip{display:inline-flex;height:34px;align-items:center;padding:0 15px;border:1px solid var(--cobalt);color:var(--cobalt);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .chip.f{background:var(--cobalt);color:var(--sheet);font-size:17px;height:44px;letter-spacing:.06em}
 .sub2{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);margin:22px 0 8px}
-figure.fam{margin-top:22px}
+figure.fam{margin:22px auto 0;display:flex;justify-content:center}
 figure.fam img{width:100%;max-width:460px;display:block;background:#fff;padding:12px;border:1px solid var(--hair)}
 
 .lightbox{position:fixed;inset:0;z-index:80;background:rgba(10,10,12,.93);display:none;align-items:center;justify-content:center;padding:24px}
